@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!--ICONS-->
+    <script src="https://kit.fontawesome.com/b2145925d4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--JS-->
+
+</head>
+<body>
+<div class="global_wrap">
+    <div class="top_header">
+        <div class="top_header_logo flex_center">
+            <span>LoGo</span>
+        </div>
+        <div class="top_header_banner banner"></div>
+        <div class="top_header_follow-us flex_center">
+            <span>Follow Us on</span>
+            <ul class="follow_us_social">
+                <li><a href=""><i class="fab fa-telegram-plane"></i></a></li>
+                <li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="add_info">
+        <div class="info">
+            <ul>
+                <li><i class="far fa-clock"></i>
+                    Last Update:
+                    <span id="current_date"></span></li>
+                <li class="search"><a href=""><i class="fas fa-search"></i>Search</a></li>
+            </ul>
+        </div>
+        <div class="actions">
+            <ul class="flex_center">
+                <li><a href=""><i class="fas fa-star"></i>Add Hyip</a></li>
+                <li><a href=""><i class="fas fa-bullhorn"></i>Add Banner</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper_content">
+        <div class="left_sidebar">
+            <ul class="main_menu">
+                <li><a href=""><i class="fas fa-home"></i>Home</a></li>
+                <li><a href=""><i class="fas fa-user"></i>About Us</a></li>
+                <li><a href=""><i class="fas fa-newspaper"></i>News</a></li>
+                <li><a href=""><i class="fas fa-blog"></i>Blog</a>
+
+                </li>
+                <li><a href=""><i class="fas fa-star"></i>Add Hyip</a></li>
+                <li><a href=""><i class="fas fa-star-of-life"></i>Add Banner</a></li>
+                <li><a href=""><i class="fas fa-plus"></i>Add Paid Sticky Hyip</a></li>
+                <li><a href=""><i class="fas fa-phone"></i>Contact Us</a></li>
+                <li><a href=""><i class="fas fa-user-plus"></i>Register</a></li>
+            </ul>
+            <div class="subscribe">
+                <div class="title_block"><span>Subscribe</span></div>
+                <form method="post" onsubmit="return checkSubscribe()" name="subscribe" action="">
+                    <input type="hidden" name="a" value="maillist">
+                    <input type="hidden" name="display" value="">
+                    <div class="form">
+                        <div class="form_wrapp">
+                            <i class="fas fa-envelope email_icon"></i>
+                            <input type="email" required class="email_subscribe" placeholder="Email" name="email">
+                        </div>
+                        <div class="form_wrapp">
+                            <input type="radio" id="subscribe" name="action" value="subscribe" checked="">
+                            <label for="subscribe">Subscribe</label>
+                        </div>
+                        <div class="form_wrapp">
+                            <input type="radio" id="unsubscribe" name="action" value="unsubscribe">
+                            <label for="unsubscribe">Unsubscribe</label>
+                        </div>
+                        <div class="form_wrapp">
+                            <input type="submit" class="subscribe_btn" value="Subscribe">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="subscribe_links">
+                <div class="title_block"><span>Support Us On</span></div>
+                <ul>
+                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="new_listing">
+                <div class="title_block"><span>New Listing</span></div>
+                <div class="list_date"><span>Oct 18, 2020</span></div>
+                <div class="list_name"><a href="">Royal Mining</a></div>
+                <div class="list_info">1% + 2134% Daily for 12 days</div>
+                <div class="list_status"><span class="success">Paying</span></div>
+                <div class="list_date"><span>Oct 20, 2020</span></div>
+                <div class="list_name"><a href>Royal Mining</a></div>
+                <div class="list_info">1% + 324% Daily for 12 days</div>
+                <div class="list_status"><span class="process">Pending</span></div>
+                <div class="list_date"><span>Oct 21, 2020</span></div>
+                <div class="list_name"><a href>Royal Mining</a></div>
+                <div class="list_info">1% + 24% Daily for 12 days</div>
+                <div class="list_status"><span class="failed">Failed</span></div>
+            </div>
+            <div class="news_feed">
+                <div class="title_block">
+                    <span>Live Traffic Feed</span>
+                </div>
+            </div>
+            <div class="our_banners">
+                <div class="title_block"><span>Our Banners</span></div>
+                <div class="banners_wrapper">
+                    <div class="banner6"></div>
+                    <div class="banner6"></div>
+                    <div class="banner6"></div>
+                    <div class="banner7"></div>
+                    <div class="banner6"></div>
+                    <div class="banner6"></div>
+                    <a href="" class="buy">Buy Banners</a>
+                </div>
+            </div>
+        </div>
+        <main>
+            <div class="banners">
+                <div class="banner3"></div>
+                <div class="banner3"></div>
+                <div class="wrapper_banner">
+                    <div class="left_banners">
+                        <div class="banner4"></div>
+                        <div class="banner4"></div>
+                        <div class="banner4"></div>
+                        <div class="banner4"></div>
+                    </div>
+                    <div class="right_banners">
+                        <div class="banner5"></div>
+                        <div class="banner5"></div>
+                        <div class="banner5"></div>
+                        <div class="banner5"></div>
+                        <div class="banner5"></div>
+                        <div class="banner5"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_content">
+                <div class="main">
+                    <div class="last_events">
+                        <div class="title_block"><span>Last Events</span></div>
+                        <div class="events_wrapper">
+                            <div class="event">
+                                <p class="event_name">Trading Station</p>
+                                <div class="site_name">Traidersmonitor.com</div>
+                                <span class="event_date">Jan 03, 2020 12:09</span>
+                                <div class="status">
+                                    <div class="old_status">Paying</div>
+                                    <span>changing to</span>
+                                    <div class="new_status">Not Paying</div>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <p class="event_name">Trading Station</p>
+                                <div class="site_name">Traidersmonitor.com</div>
+                                <span class="event_date">Jan 03, 2020 12:09</span>
+                                <div class="status">
+                                    <div class="old_status">Paying</div>
+                                    <span>changing to</span>
+                                    <div class="new_status">Not Paying</div>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <p class="event_name">Trading Station</p>
+                                <div class="site_name">Traidersmonitor.com</div>
+                                <span class="event_date">Jan 03, 2020 12:09</span>
+                                <div class="status">
+                                    <div class="old_status">Paying</div>
+                                    <span>changing to</span>
+                                    <div class="new_status">Not Paying</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top_investors">
+                        <div class="last_event">
+                            <div class="title_block"><span>Top Investors</span></div>
+                            <ul>
+                                <li>
+                                    <a href="">Royal Mining</a>
+                                    <span>$1200</span></li>
+                                <li>
+                                    <a href="">XARRA</a>
+                                    <span>$3200</span></li>
+                                <li>
+                                    <a href="">Bitcoin Invest</a>
+                                    <span>$200</span></li>
+                                <li>
+                                    <a href="">Testov</a>
+                                    <span>$1240</span></li>
+                                <li>
+                                    <a href="">Crypto case</a>
+                                    <span>$1280</span></li>
+                                <li>
+                                    <a href="">Royal Mining</a>
+                                    <span>$1200</span></li>
+                                <li>
+                                    <a href="">Mining</a>
+                                    <span>$3900</span></li>
+                            </ul>
+                        </div>
+                        <div class="last_event">
+                            <div class="title_block"><span>Top Investors</span></div>
+                            <ul class="left_align">
+                                <li>
+                                    <span>$1200</span>
+                                    <a href="">Royal Mining</a></li>
+                                <li>
+                                    <span>$3300</span>
+                                    <a href="">Investing</a></li>
+                                <li>
+                                    <span>$2200</span>
+                                    <a href="">Bitcoin Invest</a></li>
+                                <li>
+                                    <span>$1240</span>
+                                    <a href="">Testov</a></li>
+                                <li>
+                                    <span>$1280</span>
+                                    <a href="">Crypto case</a></li>
+                                <li>
+                                    <span>$1200</span>
+                                    <a href="">Royal Mining</a></li>
+                                <li>
+                                    <span>$3900</span>
+                                    <a href="">Mining</a></li>
+                            </ul>
+                        </div>
+                        <div class="last_event">
+                            <div class="title_block"><span>Top Investors</span></div>
+                            <ul>
+                                <li>
+                                    <a href="">Royal Mining</a>
+                                    <span>$1200</span></li>
+                                <li>
+                                    <a href="">XARRA</a>
+                                    <span>$3200</span></li>
+                                <li>
+                                    <a href="">Bitcoin Invest</a>
+                                    <span>$200</span></li>
+                                <li>
+                                    <a href="">Testov</a>
+                                    <span>$1240</span></li>
+                                <li>
+                                    <a href="">Crypto case</a>
+                                    <span>$1280</span></li>
+                                <li>
+                                    <a href="">Royal Mining</a>
+                                    <span>$1200</span></li>
+                                <li>
+                                    <a href="">Mining</a>
+                                    <span>$3900</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="statistic_rgb">
+                        <div class="info">
+                            <div class="icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="more">
+                                <div class="total">11078</div>
+                                <p>HYIPs in Database</p>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div class="more">
+                                <div class="total">494</div>
+                                <p>Paying HYIPs</p>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <div class="more">
+                                <div class="total">270</div>
+                                <p>Monitors and Blogs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_sidebar">
+                    <div class="login">
+                        <div class="title_block"><span>Sign In</span></div>
+                        <form method="post" name="loginform" onsubmit="return checklogin()">
+                            <input type="hidden" name="a" value="do_login">
+                            <input type="hidden" name="referrer" value="/">
+                            <div class="form_wrapp">
+                                <input type="email" name="" placeholder="Email" id="">
+                            </div>
+                            <div class="form_wrapp">
+                                <input type="password" placeholder="Password" name="" id="">
+                            </div>
+                            <div class="form_wrapp">
+                                <input type="checkbox" name="" id="remember">
+                                <label for="remember">Remember Me</label>
+                            </div>
+                            <div class="form_wrapp">
+                                <input type="submit" value="Sign In">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="popular_hyips">
+                        <div class="title_block"><span>Top 10 Popular Hyips</span></div>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <span class="name_hyip">Crypto mining group</span>
+                                </a>
+                                <div class="info_hyip">Yesterday hits: 12345, Host: 12343</div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="name_hyip">1coin 1v</span>
+                                </a>
+                                <div class="info_hyip">Yesterday hits: 12345, Host: 12343</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="top_rgb">
+                        <div class="title_block"><span>Top RGB</span></div>
+                        <ul>
+                            <li>
+                                <a class="name" href="">Royal Mining</a>
+                                <span class="price">1200%</span>
+                            </li>
+                            <li>
+                                <a class="name" href="">Bitcoin</a>
+                                <span class="price">2100%</span>
+                            </li>
+                            <li>
+                                <a class="name" href="">Hashlead</a>
+                                <span class="price">2300%</span>
+                            </li>
+                            <li>
+                                <a class="name" href="">Hashlead</a>
+                                <span class="price">1200%</span>
+                            </li>
+                            <li>
+                                <a class="name" href="">Hashlead</a>
+                                <span class="price">1234%</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="last_votes">
+                        <div class="title_block"><span>Last Votes</span></div>
+                        <div class="vote_date">10 Oct 2020</div>
+                        <ul>
+                            <li><a href="">XARRA</a></li>
+                            <li><a href="">Testarov</a></li>
+                            <li><a href="">Bitcoin Invest</a></li>
+                            <li><a href="">Royal Mining</a></li>
+                            <li><a href="">Royal Mining</a></li>
+                            <li><a href="">Royal Mining</a></li>
+                            <li><a href="">Royal Mining</a></li>
+                        </ul>
+                        <div class="vote_date">06 Oct 2020</div>
+                        <ul>
+                            <li><a href="">XARRA</a></li>
+                            <li><a href="">Testarov</a></li>
+                            <li><a href="">Bitcoin Invest</a></li>
+                            <li><a href="">Royal Mining</a></li>
+                            <li><a href="">Bet Best</a></li>
+                            <li><a href="">Royal Mining</a></li>
+                        </ul>
+                    </div>
+                    <div class="last_scams">
+                        <div class="title_block"><span>Last Scams</span></div>
+                        <ul>
+                            <li>
+                                <a href="">Fat Brunds</a>
+                                <span>Scam</span>
+                            </li>
+                            <li>
+                                <a href="">XARRA</a>
+                                <span>Scam</span>
+                            </li>
+                            <li>
+                                <a href="">Orlindex</a>
+                                <span>Scam</span>
+                            </li>
+                            <li>
+                                <a href="">Bitcoin</a>
+                                <span>Scam</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="our_banners">
+                        <div class="title_block"><span>Our Banners</span></div>
+                        <div class="banners">
+                            <div class="banner6"></div>
+                            <div class="banner6"></div>
+                            <div class="banner6"></div>
+                            <a class="buy" href="">Buy Banners</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
