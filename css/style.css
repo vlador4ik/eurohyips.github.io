@@ -455,7 +455,7 @@ body {
   display: inline-block;
 }
 .global_wrap .wrapper_content .main_content .main .last_events .events_wrapper .event .site_name {
-  font-size: 18px;
+  font-size: 14px;
   color: #fff;
   margin-bottom: 10px;
 }
@@ -559,6 +559,195 @@ body {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project {
+  background: linear-gradient(255.44deg, rgba(217, 36, 117, 0.5) 0%, rgba(217, 36, 117, 0.5) 48.44%, rgba(113, 62, 139, 0.5) 100%);
+  border-radius: 40px;
+  margin-top: 20px;
+  padding: 20px;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .title_block {
+  text-align: left;
+  padding-left: 0;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .title_block i {
+  font-size: 25px;
+  margin-right: 10px;
+  color: #fff;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_info_left {
+  display: flex;
+  align-items: center;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_info_left p {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_info_left .rating .emptystars {
+  background: url(https://eurohyips.net/images/emptystars.png) no-repeat;
+  position: relative;
+  width: 133px;
+  height: 23px;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_info_left .rating .emptystars .fullstar {
+  background: url(https://eurohyips.net/images/fullstars.png) no-repeat;
+  position: absolute;
+  height: 18px;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_info_left .monitored_time {
+  color: #fff;
+  margin: 0 10px;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_info_left .project_status span {
+  border-radius: 20px;
+  padding: 3px 15px;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid #05E0E4;
+  color: #05E0E4;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_info_left .project_status .pending {
+  border: 1px solid #FF8E68;
+  color: #FF8E68;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_info_left .project_status .failed {
+  color: #D4232F;
+  border: 1px solid #D4232F;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .number {
+  height: 40px;
+  width: 38px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .number span {
+  font-size: 20px;
+  color: #fff;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .progress_bar {
+  margin-top: 20px;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .progress_bar .bar {
+  position: relative;
+  width: 100%;
+  background: #191d36;
+  border-radius: 20px;
+  height: 20px;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .progress_bar .bar .progress {
+  position: absolute;
+  width: 30%;
+  border-radius: 20px;
+  height: 20px;
+  background: linear-gradient(180deg, #A26CF8 0%, #B65582 100%);
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .banners ul {
+  display: flex;
+  justify-content: space-between;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .banners ul li {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .project_more {
+  width: 35%;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .project_more .project_info-list {
+  background: #191D36;
+  border-radius: 20px;
+  padding: 15px;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .project_more .investors {
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .project_more .investors li {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .project_more .project_info-list li {
+  margin-bottom: 11px;
+  display: flex;
+  color: #fff;
+  font-size: 16px;
+  justify-content: space-between;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .project_more .project_info-list li:last-child {
+  margin-bottom: 0;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .project_more .project_info-list li span {
+  font-size: 14px;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .percent_success {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #fff;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .plan_info {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #fff;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .plan_info span {
+  margin-right: 5px;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .package_info {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 60px;
+  border: 2px solid #fff;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .package_info .last_paid {
+  font-size: 13px;
+  color: #fff;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .package_info .package_menu {
+  display: flex;
+  align-items: center;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .package_info .package_menu li {
+  margin-right: 10px;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .package_info .package_menu li a {
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .premium {
+  background: linear-gradient(255.55deg, rgba(113, 0, 254, 0.5) 0%, rgba(113, 0, 254, 0.5) 48.94%, rgba(113, 62, 139, 0.5) 98.91%);
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .perfomer {
+  background: linear-gradient(255.44deg, rgba(16, 69, 255, 0.5) 0%, rgba(16, 69, 255, 0.5) 47.4%, rgba(113, 62, 139, 0.5) 100%);
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .under {
+  background: linear-gradient(255.44deg, rgba(3, 250, 255, 0.5) 0%, rgba(3, 250, 255, 0.5) 51.56%, rgba(113, 62, 139, 0.5) 100%);
 }
 .global_wrap .wrapper_content .main_content .right_sidebar {
   width: 24%;
