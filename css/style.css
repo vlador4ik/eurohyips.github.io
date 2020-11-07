@@ -103,6 +103,12 @@ body {
   justify-content: center;
 }
 
+.flex_justify {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .title_block {
   padding: 10px;
   text-align: center;
@@ -562,16 +568,16 @@ body {
 }
 .global_wrap .wrapper_content .main_content .main .projects_listing .project {
   background: linear-gradient(255.44deg, rgba(217, 36, 117, 0.5) 0%, rgba(217, 36, 117, 0.5) 48.44%, rgba(113, 62, 139, 0.5) 100%);
-  border-radius: 40px;
-  margin-top: 20px;
-  padding: 20px;
+  border-radius: 20px;
+  margin-top: 15px;
+  padding: 10px;
 }
 .global_wrap .wrapper_content .main_content .main .projects_listing .project .title_block {
   text-align: left;
-  padding-left: 0;
+  padding: 0;
 }
 .global_wrap .wrapper_content .main_content .main .projects_listing .project .title_block i {
-  font-size: 25px;
+  font-size: 17px;
   margin-right: 10px;
   color: #fff;
 }
@@ -607,7 +613,14 @@ body {
   color: #fff;
   margin: 0 10px;
 }
-.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_info_left .project_status span {
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_right {
+  display: flex;
+  align-items: center;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_right .project_status {
+  margin-right: 20px;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_right .project_status span {
   border-radius: 20px;
   padding: 3px 15px;
   font-size: 12px;
@@ -615,29 +628,29 @@ body {
   border: 1px solid #05E0E4;
   color: #05E0E4;
 }
-.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_info_left .project_status .pending {
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_right .project_status .pending {
   border: 1px solid #FF8E68;
   color: #FF8E68;
 }
-.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_info_left .project_status .failed {
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_right .project_status .failed {
   color: #D4232F;
   border: 1px solid #D4232F;
 }
-.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .number {
-  height: 40px;
-  width: 38px;
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_right .number {
+  height: 30px;
+  width: 32px;
   border-radius: 10px;
   border: 1px solid #fff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .number span {
-  font-size: 20px;
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_right .number span {
+  font-size: 17px;
   color: #fff;
 }
 .global_wrap .wrapper_content .main_content .main .projects_listing .project .progress_bar {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .global_wrap .wrapper_content .main_content .main .projects_listing .project .progress_bar .bar {
   position: relative;
@@ -653,8 +666,14 @@ body {
   height: 20px;
   background: linear-gradient(180deg, #A26CF8 0%, #B65582 100%);
 }
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .progress_bar .bar .progress span {
+  font-size: 18px;
+  color: #fff;
+  position: absolute;
+  left: 8px;
+}
 .global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper {
-  margin-top: 20px;
+  margin-top: 15px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -676,6 +695,16 @@ body {
   background: #191D36;
   border-radius: 20px;
   padding: 15px;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .project_more .request_rgb {
+  text-align: center;
+  color: #fff;
+  padding: 5px 20px;
+  background: linear-gradient(180deg, #A26CF8 0%, #B65582 100%);
+  font-size: 17px;
+  border-radius: 20px;
+  margin-top: 5px;
+  text-decoration: none;
 }
 .global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .project_more .investors {
   margin-top: 7px;
@@ -720,7 +749,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 60px;
   border: 2px solid #fff;
 }
@@ -762,7 +791,14 @@ body {
   text-align: center;
   color: #fff;
 }
+.global_wrap .wrapper_content .main_content .right_sidebar .login .form_wrapp i {
+  position: absolute;
+  top: 13px;
+  left: 17px;
+  color: #f73164;
+}
 .global_wrap .wrapper_content .main_content .right_sidebar .login .form_wrapp input[type=email], .global_wrap .wrapper_content .main_content .right_sidebar .login .form_wrapp input[type=password] {
+  position: relative;
   outline: none;
   width: 75%;
   border-radius: 20px;
