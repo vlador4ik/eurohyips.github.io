@@ -210,16 +210,31 @@ body {
   width: 20%;
 }
 .global_wrap .wrapper_content .left_sidebar .main_menu {
+  z-index: 20;
+  position: relative;
   padding: 20px;
   border-radius: 20px;
   margin-top: 20px;
   background: linear-gradient(180deg, rgba(162, 108, 248, 0.5) 0%, rgba(182, 85, 130, 0.5) 100%);
 }
-.global_wrap .wrapper_content .left_sidebar .main_menu p {
-  font-size: 15px;
-  color: #fff;
-  margin-bottom: 20px;
-  font-weight: 500;
+.global_wrap .wrapper_content .left_sidebar .main_menu .added_menu ul {
+  max-height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.6s;
+  overflow: hidden;
+  padding: 0px 0 0 30px;
+}
+.global_wrap .wrapper_content .left_sidebar .main_menu li.openMenu {
+  position: relative;
+}
+.global_wrap .wrapper_content .left_sidebar .main_menu li.openMenu ul {
+  position: relative;
+  visibility: visible;
+  max-height: 260px;
+  opacity: 1;
+  padding: 30px 0 0 30px;
+  overflow: hidden;
 }
 .global_wrap .wrapper_content .left_sidebar .main_menu li {
   margin-bottom: 30px;
@@ -246,6 +261,18 @@ body {
   color: #fff;
   font-size: 16px;
   margin-right: 15px;
+}
+.global_wrap .wrapper_content .left_sidebar .main_menu .color_menu a {
+  color: #f73164;
+}
+.global_wrap .wrapper_content .left_sidebar .main_menu .color_menu a:hover {
+  color: #fff;
+}
+.global_wrap .wrapper_content .left_sidebar .main_menu .color_menu a:hover i {
+  color: #fff;
+}
+.global_wrap .wrapper_content .left_sidebar .main_menu .color_menu i {
+  color: #f73164;
 }
 .global_wrap .wrapper_content .left_sidebar .subscribe {
   padding: 10px;
@@ -701,7 +728,7 @@ body {
   color: #fff;
   padding: 5px 20px;
   background: linear-gradient(180deg, #A26CF8 0%, #B65582 100%);
-  font-size: 17px;
+  font-size: 14px;
   border-radius: 20px;
   margin-top: 5px;
   text-decoration: none;
@@ -946,4 +973,91 @@ body {
   border-radius: 20px;
   margin-top: 10px;
   text-decoration: none;
+}
+.global_wrap footer {
+  margin-top: 20px;
+  padding: 10px;
+  background: linear-gradient(180deg, rgba(162, 108, 248, 0.5) 0%, rgba(182, 85, 130, 0.5) 100%);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.global_wrap footer .footer_wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.global_wrap footer .footer_wrapper .company_info img {
+  max-width: 150px;
+}
+.global_wrap footer .footer_wrapper .company_info .text_after_logo {
+  color: #fff;
+  font-size: 14px;
+}
+.global_wrap footer .footer_wrapper .company_info ul {
+  display: flex;
+  margin: 10px 0;
+}
+.global_wrap footer .footer_wrapper .company_info ul li {
+  margin-right: 15px;
+}
+.global_wrap footer .footer_wrapper .company_info ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+.global_wrap footer .footer_wrapper .company_info .copiryght {
+  font-size: 14px;
+  color: #fff;
+}
+.global_wrap footer .footer_wrapper .contact_us h1 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.global_wrap footer .footer_wrapper .contact_us ul li {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.global_wrap footer .footer_wrapper .contact_us ul li i {
+  color: #f73164;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.global_wrap footer .footer_wrapper .subscribe h1 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.global_wrap footer .footer_wrapper .subscribe form label {
+  color: #fff;
+  font-size: 14px;
+}
+.global_wrap footer .footer_wrapper .subscribe form input {
+  outline: none;
+}
+.global_wrap footer .footer_wrapper .subscribe form .subscribe_form {
+  position: relative;
+  margin-top: 10px;
+}
+.global_wrap footer .footer_wrapper .subscribe form .subscribe_form input[type=submit] {
+  background: #f73164;
+  color: #fff;
+  font-size: 16.5px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  outline: none;
+  border: none;
+}
+.global_wrap footer .footer_wrapper .subscribe form .subscribe_form input[type=submit]:focus {
+  outline: none;
+  border: none;
+}
+.global_wrap footer .footer_wrapper .subscribe form .subscribe_form input[type=submit]:active {
+  outline: none;
+  border: none;
 }
