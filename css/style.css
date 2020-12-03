@@ -97,6 +97,23 @@ body {
   margin-bottom: 10px;
 }
 
+@keyframes tremor {
+  0% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+  25% {
+    transform: rotate(-10deg);
+    transition: 1s all;
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transition: 1s all;
+    transform: rotate(180deg);
+    transform: scale(1.2);
+  }
+}
 .flex_center {
   display: flex;
   align-items: center;
@@ -157,6 +174,7 @@ body {
 }
 .global_wrap .top_header .top_header_follow-us .follow_us_social li a i {
   font-size: 15px;
+  animation: 1s tremor ease-out infinite;
 }
 .global_wrap .add_info {
   background: #2D325A;
@@ -164,6 +182,9 @@ body {
   justify-content: space-between;
   padding: 10px 20px;
   align-items: center;
+}
+.global_wrap .add_info .info {
+  width: 65%;
 }
 .global_wrap .add_info .info ul {
   display: flex;
@@ -174,18 +195,88 @@ body {
   color: #fff;
   font-size: 14px;
 }
+.global_wrap .add_info .info ul li:first-child {
+  max-width: 320px;
+  width: 100%;
+}
 .global_wrap .add_info .info ul li i {
   font-size: 15px;
   margin-right: 5px;
   color: #f73164;
 }
-.global_wrap .add_info .info ul .search i {
-  color: #fff;
+.global_wrap .add_info .info ul li .search-box {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 25px;
+  transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+  width: 25px;
 }
-.global_wrap .add_info .info ul .search a {
+.global_wrap .add_info .info ul li .search-box + label {
+  max-width: 0;
+}
+.global_wrap .add_info .info ul li .search-box + label .search-icon {
   color: #fff;
+  transition: all 0.6s;
+}
+.global_wrap .add_info .info ul li .search-box:hover + label .search-icon {
+  color: #f73164;
+}
+.global_wrap .add_info .info ul li .search-box:focus {
+  border: none;
+  border-radius: auto;
+  background: #ebebeb;
+  box-shadow: none;
+  color: black;
+  cursor: text;
+  outline: none;
+  padding-left: 15px;
+  transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
+  width: 200px;
+}
+.global_wrap .add_info .info ul li .search-box:focus + label i {
+  opacity: 0;
+}
+.global_wrap .add_info .info ul li .search-box::placeholder {
+  color: #000;
+}
+.global_wrap .add_info .info ul li .search-box:not(:focus) {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.global_wrap .add_info .info ul li .search-icon {
+  cursor: pointer;
+  left: -31px;
+  position: relative;
+  top: 2px;
+}
+.global_wrap .add_info .info ul li .search-btn {
+  position: relative;
+  color: #fff;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
   font-size: 15px;
-  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  margin-left: -30px;
+}
+.global_wrap .add_info .info ul ::-webkit-input-placeholder {
+  color: #000;
+  opacity: 0.5;
+}
+.global_wrap .add_info .info ul :-moz-placeholder {
+  color: #000;
+  opacity: 0.5;
+}
+.global_wrap .add_info .info ul ::-moz-placeholder {
+  color: #000;
+  opacity: 0.5;
+}
+.global_wrap .add_info .info ul :-ms-input-placeholder {
+  color: #000;
+  opacity: 0.5;
 }
 .global_wrap .add_info .actions li {
   margin-right: 30px;
@@ -209,13 +300,18 @@ body {
 .global_wrap .wrapper_content .left_sidebar {
   width: 20%;
 }
+.global_wrap .wrapper_content .left_sidebar .menu_wrapper {
+  min-height: 480px;
+}
 .global_wrap .wrapper_content .left_sidebar .main_menu {
+  display: block;
   z-index: 20;
   position: relative;
   padding: 20px;
-  border-radius: 20px;
-  margin-top: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
   background: linear-gradient(180deg, rgba(162, 108, 248, 0.5) 0%, rgba(182, 85, 130, 0.5) 100%);
+  transition: display 3s;
 }
 .global_wrap .wrapper_content .left_sidebar .main_menu .added_menu ul {
   max-height: 0;
@@ -227,6 +323,10 @@ body {
 }
 .global_wrap .wrapper_content .left_sidebar .main_menu li.openMenu {
   position: relative;
+}
+.global_wrap .wrapper_content .left_sidebar .main_menu li.openMenu .fa-angle-down {
+  transform: rotate(180deg);
+  transition: 0.5s;
 }
 .global_wrap .wrapper_content .left_sidebar .main_menu li.openMenu ul {
   position: relative;
@@ -241,6 +341,11 @@ body {
 }
 .global_wrap .wrapper_content .left_sidebar .main_menu li:last-child {
   margin-bottom: 0;
+}
+.global_wrap .wrapper_content .left_sidebar .main_menu li .fa-angle-down {
+  color: #fff;
+  margin-left: 10px;
+  transition: 0.5s;
 }
 .global_wrap .wrapper_content .left_sidebar .main_menu li a {
   font-size: 15px;
@@ -273,6 +378,31 @@ body {
 }
 .global_wrap .wrapper_content .left_sidebar .main_menu .color_menu i {
   color: #f73164;
+}
+.global_wrap .wrapper_content .left_sidebar ul.full_width {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: display 3s;
+  background: linear-gradient(180deg, #a26cf8 0%, #b65582 100%);
+}
+.global_wrap .wrapper_content .left_sidebar ul.full_width li {
+  margin-bottom: 0;
+}
+.global_wrap .wrapper_content .left_sidebar ul.full_width li a {
+  font-size: 13px;
+}
+.global_wrap .wrapper_content .left_sidebar ul.full_width li a i {
+  margin-right: 7px;
+}
+.global_wrap .wrapper_content .left_sidebar ul.full_width .added_menu {
+  padding: 0;
+}
+.global_wrap .wrapper_content .left_sidebar ul.full_width .added_menu li {
+  margin-bottom: 15px;
 }
 .global_wrap .wrapper_content .left_sidebar .subscribe {
   padding: 10px;
@@ -482,19 +612,24 @@ body {
   background: #191D36;
   border-radius: 40px;
   padding: 10px;
-  font-size: 15px;
+  font-size: 14px;
   color: #fff;
   margin-bottom: 10px;
   display: inline-block;
 }
 .global_wrap .wrapper_content .main_content .main .last_events .events_wrapper .event .site_name {
-  font-size: 14px;
+  font-size: 13px;
   color: #fff;
   margin-bottom: 10px;
+  border-radius: 20px;
+  padding: 5px 15px;
+  background: rgba(247, 49, 100, 0.5);
+  text-align: center;
 }
 .global_wrap .wrapper_content .main_content .main .last_events .events_wrapper .event .event_date {
   font-size: 13px;
   color: #fff;
+  display: block;
 }
 .global_wrap .wrapper_content .main_content .main .last_events .events_wrapper .event .status {
   margin-top: 10px;
@@ -612,6 +747,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 5px;
 }
 .global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_info_left {
   display: flex;
@@ -622,19 +758,22 @@ body {
   font-size: 16px;
   margin-right: 10px;
 }
-.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_info_left .rating .emptystars {
-  background: url(https://eurohyips.net/images/emptystars.png) no-repeat;
-  position: relative;
-  width: 133px;
-  height: 23px;
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_info_left .rating {
+  display: flex;
 }
-.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_info_left .rating .emptystars .fullstar {
-  background: url(https://eurohyips.net/images/fullstars.png) no-repeat;
-  position: absolute;
-  height: 18px;
-  top: 0;
-  width: 100%;
-  left: 0;
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_info_left .rating .rate {
+  font-size: 14px;
+  padding: 7px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_info_left .rating .good {
+  background: green;
+  margin-right: 15px;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_info_left .rating .bad {
+  background: red;
 }
 .global_wrap .wrapper_content .main_content .main .projects_listing .project .project_info .project_info_left .monitored_time {
   color: #fff;
@@ -723,6 +862,34 @@ body {
   border-radius: 20px;
   padding: 15px;
 }
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .project_more .project_info-list .emptystars {
+  background: url(https://eurohyips.net/images/emptystars.png) no-repeat;
+  position: relative;
+  width: 133px;
+  height: 23px;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .project_more .project_info-list .emptystars .fullstar {
+  background: url(https://eurohyips.net/images/fullstars.png) no-repeat;
+  position: absolute;
+  height: 18px;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .project_more .project_info-list li {
+  margin-bottom: 11px;
+  display: flex;
+  color: #fff;
+  font-size: 14px;
+  justify-content: space-between;
+  align-items: center;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .project_more .project_info-list li:last-child {
+  margin-bottom: 0;
+}
+.global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .project_more .project_info-list li span {
+  font-size: 14px;
+}
 .global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .project_more .request_rgb {
   text-align: center;
   color: #fff;
@@ -745,19 +912,6 @@ body {
   background: #fff;
   border-radius: 50%;
 }
-.global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .project_more .project_info-list li {
-  margin-bottom: 11px;
-  display: flex;
-  color: #fff;
-  font-size: 16px;
-  justify-content: space-between;
-}
-.global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .project_more .project_info-list li:last-child {
-  margin-bottom: 0;
-}
-.global_wrap .wrapper_content .main_content .main .projects_listing .project .info_wrapper .project_more .project_info-list li span {
-  font-size: 14px;
-}
 .global_wrap .wrapper_content .main_content .main .projects_listing .project .percent_success {
   margin-top: 10px;
   font-size: 15px;
@@ -765,7 +919,7 @@ body {
 }
 .global_wrap .wrapper_content .main_content .main .projects_listing .project .plan_info {
   margin-top: 10px;
-  font-size: 15px;
+  font-size: 14px;
   color: #fff;
 }
 .global_wrap .wrapper_content .main_content .main .projects_listing .project .plan_info span {

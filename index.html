@@ -26,9 +26,9 @@
         <div class="top_header_follow-us flex_center">
             <span>Follow Us on</span>
             <ul class="follow_us_social">
-                <li><a href=""><i class="fab fa-telegram-plane"></i></a></li>
-                <li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
-                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a target="_blank" href="https://t.me/eurohyipsnet"><i class="fab fa-telegram-plane"></i></a></li>
+                <li><a target="_blank" href="https://vk.com/eurohyips"><i class="fab fa-vk"></i></a></li>
+                <li><a target="_blank" href="https://twitter.com/Euro_Hyips"><i class="fab fa-twitter"></i></a></li>
             </ul>
         </div>
     </div>
@@ -36,9 +36,17 @@
         <div class="info">
             <ul>
                 <li><i class="far fa-clock"></i>
-                    Last Update:
+                    Server Time:
                     <span class="current_date"></span></li>
-                <li class="search"><a href=""><i class="fas fa-search"></i>Search</a></li>
+                <li>
+                    <form class="search-container" action="http://eurohyips.net/">
+                        <input class="search-box" id="search-box" type="text" name="" placeholder="Search...">
+                        <label class="search-icon-container" for="search-box">
+                            <i class="fas fa-search search-icon"></i>
+                        </label>
+                        <input class="search-btn" type="submit" value="Search">
+                    </form>
+                </li>
             </ul>
         </div>
         <div class="actions">
@@ -50,34 +58,38 @@
     </div>
     <div class="wrapper_content">
         <div class="left_sidebar">
-            <ul class="main_menu">
-                <li><a href=""><i class="fas fa-home"></i>Home</a></li>
-                <li class="added_menu"><a href="#"><i class="fas fa-layer-group"></i>Projects</a>
-                    <ul>
-                        <li><a href="">Latest Added</a></li>
-                        <li><a href="">Vip Projects</a></li>
-                        <li><a href="">Exclusive Projects</a></li>
-                        <li><a href="">Premium Projects</a></li>
-                        <li><a href="">Standard Projects</a></li>
-                        <li><a href="">Black list</a></li>
-                    </ul>
-                </li>
-                <li class="added_menu"><a href="#"><i class="fas fa-newspaper"></i>Articles</a>
-                <ul>
-                    <li><a href="">News</a></li>
-                    <li><a href="">Reviews</a></li>
-                    <li><a href="">Hyip Service</a></li>
-                    <li><a href="">FAQ</a></li>
+            <div class="menu_wrapper">
+                <ul class="main_menu">
+                    <li><a href=""><i class="fas fa-home"></i>Home</a></li>
+                    <li class="added_menu"><a href="#"><i class="fas fa-layer-group"></i>Projects</a><i
+                            class="fas fa-angle-down"></i>
+                        <ul>
+                            <li><a href="">Latest Added</a></li>
+                            <li><a href="">Vip Projects</a></li>
+                            <li><a href="">Exclusive Projects</a></li>
+                            <li><a href="">Premium Projects</a></li>
+                            <li><a href="">Standard Projects</a></li>
+                            <li><a href="">Black list</a></li>
+                        </ul>
+                    </li>
+                    <li class="added_menu"><a href="#"><i class="fas fa-newspaper"></i>Articles</a><i
+                            class="fas fa-angle-down"></i>
+                        <ul>
+                            <li><a href="">News</a></li>
+                            <li><a href="">Reviews</a></li>
+                            <li><a href="">Hyip Service</a></li>
+                            <li><a href="">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href=""><i class="fas fa-shield-alt"></i>Insurance</a></li>
+                    <li><a href=""><i class="fas fa-gift"></i>Bonus</a></li>
+                    <li class="color_menu"><a href=""><i class="fas fa-plus"></i>Add Project</a></li>
+                    <li class="color_menu"><a href=""><i class="fas fa-bullhorn"></i>Advertise</a></li>
+                    <li><a href=""><i class="fas fa-user"></i>Login</a></li>
+                    <li><a href=""><i class="fas fa-user-plus"></i>Sign Up</a></li>
+                    <li><a href=""><i class="fas fa-phone-alt"></i>Contact Us</a></li>
                 </ul>
-                </li>
-                <li><a href=""><i class="fas fa-shield-alt"></i>Insurance</a></li>
-                <li><a href=""><i class="fas fa-gift"></i>Bonus</a></li>
-                <li class="color_menu"><a href=""><i class="fas fa-plus"></i>Add Project</a></li>
-                <li class="color_menu"><a href=""><i class="fas fa-bullhorn"></i>Advertise</a></li>
-                <li><a href=""><i class="fas fa-user"></i>Login</a></li>
-                <li><a href=""><i class="fas fa-user-plus"></i>Sign Up</a></li>
-                <li><a href=""><i class="fas fa-phone-alt"></i>Contact Us</a></li>
-            </ul>
+            </div>
             <div class="subscribe">
                 <div class="title_block"><span>Subscribe</span></div>
                 <form method="post" onsubmit="return checkSubscribe()" name="subscribe" action="">
@@ -318,14 +330,16 @@
                                     class="fas fa-trophy"></i><span>Class - Ultra (Top Most Choice)</span></div>
                             <div class="project_info">
                                 <div class="project_info_left">
-                                    <p>Investellect - </p>
-                                    <div class="rating">
-                                        <div class="emptystars">
-                                            <div class="fullstar"></div>
-                                        </div>
-                                    </div>
                                     <div class="monitored_time">
                                         Monitored : 153 Days
+                                    </div>
+                                    <div class="rating">
+                                        <div class="rate good">
+                                            <span>Good 245</span>
+                                        </div>
+                                        <div class="rate bad">
+                                            <span>Bad 10</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="project_right">
@@ -384,7 +398,9 @@
                                             <p>Max Invest:</p><span>50000</span>
                                         </li>
                                         <li>
-                                            <p>Referral:</p><span>10%</span>
+                                            <p>Our Rating:</p><span><div class="emptystars">
+                                            <div class="fullstar"></div>
+                                        </div></span>
                                         </li>
                                     </ul>
                                     <div class="flex_justify">
@@ -425,14 +441,16 @@
                                     class="fas fa-trophy"></i><span>Class - Premium Top Choices</span></div>
                             <div class="project_info">
                                 <div class="project_info_left">
-                                    <p>Investellect - </p>
-                                    <div class="rating">
-                                        <div class="emptystars">
-                                            <div class="fullstar"></div>
-                                        </div>
-                                    </div>
                                     <div class="monitored_time">
                                         Monitored : 153 Days
+                                    </div>
+                                    <div class="rating">
+                                        <div class="rate good">
+                                            <span>Good 245</span>
+                                        </div>
+                                        <div class="rate bad">
+                                            <span>Bad 10</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="project_right">
@@ -491,7 +509,9 @@
                                             <p>Max Invest:</p><span>50000</span>
                                         </li>
                                         <li>
-                                            <p>Referral:</p><span>10%</span>
+                                            <p>Our Rating:</p><span><div class="emptystars">
+                                            <div class="fullstar"></div>
+                                        </div></span>
                                         </li>
                                     </ul>
                                     <div class="flex_justify">
@@ -532,14 +552,16 @@
                                     class="fas fa-trophy"></i><span>Class - A Top Perfomer Hyips</span></div>
                             <div class="project_info">
                                 <div class="project_info_left">
-                                    <p>Investellect - </p>
-                                    <div class="rating">
-                                        <div class="emptystars">
-                                            <div class="fullstar"></div>
-                                        </div>
-                                    </div>
                                     <div class="monitored_time">
                                         Monitored : 153 Days
+                                    </div>
+                                    <div class="rating">
+                                        <div class="rate good">
+                                            <span>Good 245</span>
+                                        </div>
+                                        <div class="rate bad">
+                                            <span>Bad 10</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="project_right">
@@ -598,7 +620,9 @@
                                             <p>Max Invest:</p><span>50000</span>
                                         </li>
                                         <li>
-                                            <p>Referral:</p><span>10%</span>
+                                            <p>Our Rating:</p><span><div class="emptystars">
+                                            <div class="fullstar"></div>
+                                        </div></span>
                                         </li>
                                     </ul>
                                     <div class="flex_justify">
@@ -639,14 +663,16 @@
                                     class="fas fa-trophy"></i><span>Class - B Under Trial Hyips</span></div>
                             <div class="project_info">
                                 <div class="project_info_left">
-                                    <p>Investellect - </p>
-                                    <div class="rating">
-                                        <div class="emptystars">
-                                            <div class="fullstar"></div>
-                                        </div>
-                                    </div>
                                     <div class="monitored_time">
                                         Monitored : 153 Days
+                                    </div>
+                                    <div class="rating">
+                                        <div class="rate good">
+                                            <span>Good 245</span>
+                                        </div>
+                                        <div class="rate bad">
+                                            <span>Bad 10</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="project_right">
@@ -705,7 +731,9 @@
                                             <p>Max Invest:</p><span>50000</span>
                                         </li>
                                         <li>
-                                            <p>Referral:</p><span>10%</span>
+                                            <p>Our Rating:</p><span><div class="emptystars">
+                                            <div class="fullstar"></div>
+                                        </div></span>
                                         </li>
                                     </ul>
                                     <div class="flex_justify">
@@ -749,7 +777,7 @@
                             <input type="hidden" name="referrer" value="/">
                             <div class="form_wrapp">
                                 <i class="fas fa-envelope email_icon" aria-hidden="true"></i>
-                                <input type="email" name="" placeholder="Email" id="">
+                                <input type="email" name="" placeholder="Email">
                             </div>
                             <div class="form_wrapp">
                                 <i class="fas fa-key"></i>
@@ -868,7 +896,7 @@
                 <img src="https://eurohyips.net/img/logo.png" alt="">
                 <p class="text_after_logo">Be connect with us</p>
                 <ul>
-                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
                     <li><a href=""><i class="fab fa-twitter"></i></a></li>
                     <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
@@ -891,7 +919,7 @@
                     <input type="radio" id="unsubscribeFooter" name="action" value="unsubscribe">
                     <label for="unsubscribeFooter">Unsubscribe</label>
                     <div class="subscribe_form">
-                        <input required type="email" name="" id="">
+                        <input required type="email" name="">
                         <input type="submit" value=">">
                     </div>
                 </form>
